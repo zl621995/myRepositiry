@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>上海尚学堂</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/keyframes.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+<style>
+
+#img1,#img2,#img3{
+  opacity: 0;
+  max-width: 380px;
+  
+}
+.img4{
+  transition: 1.5s ease;
+}
+.img4:hover{
+  transform: scale(1.1);
+}
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+    body {
+      font-family: "Microsoft Yahei";
+      font-size: 14px;
+      position: relative;
+      background: #333;
+
+    }
+    li{
+      list-style: none;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /*.topLogo{
+      position: absolute;
+      left: 40px;
+      top: 10px;
+      z-index: 99;
+
+    }
+    .topLogo a{
+      display: block;
+    }*/
+    .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+    color: #fff;
+    background:transparent;
+}
+.navbar-inverse .navbar-nav>li>a {
+    border-bottom: 2px solid transparent;
+    color: #fff;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+
+  border-bottom: 2px solid rgb(254,208,53);
+}
+    .dropdown-menu {background-color: transparent;
+      min-width: 100px;}
+   
+    .dropdown-menu>li>a {
+      padding: 3px 10px;
+      color: #fff;
+
+  }
+    .navbar{
+      margin-bottom: 0;
+      border-radius: 0;
+
+      background: transparent;
+      border:0;
+      transition: all .5s ease;
+
+
+    }
+
+    .navbar-brand{
+      padding:6px 35px;
+
+    }
+    
+
+    .triangle-down {
+    width: 0;
+    position: relative;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #EDEFF0;
+    margin: 0 auto;
+    z-index: 100;
+    padding: 0!important;
+    margin-bottom: -20px;
+}
+    /*-------------process*/
+
+    #process {
+      position: relative;
+      background: rgb(249,249,249);
+
+
+
+    }
+    #process h1 {
+      color: #000000;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    #process h1 span {
+      color: #000000;
+    }
+    #process h1 span:after {
+      background: #000000;
+    }
+
+    .row-process{
+      margin-top: 40px;
+    }
+
+
+    .work-phase {
+      position: relative;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 40px;
+      border:4px solid rgb(249,249,249);;
+      padding:15px 30px 40px;
+      
+    }
+    .work-phase1{
+      animation: getR 2s ease;
+    }
+    .work-phase2{
+      animation: getShow 5s ease;
+    }
+    .work-phase3{
+      animation: getL 2s ease;
+    }
+    .work-phase:hover{
+      transition: All .4s ease;
+      -webkit-transition: All .4s ease;
+      -moz-transition: All .4s ease;
+      -o-transition: All .4s ease;
+      border:4px solid #e3e3e3
+    }
+    .work-phase h2 {
+      position: relative;
+      text-align: center;
+      color: #000000;
+      text-transform: capitalize;
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 0;
+      margin-top: 24px;
+      font-weight:100;
+    }
+        .wp-class li{
+      position: relative;
+      border-bottom: 1px solid #cccccc;
+      display: block;
+      height: 55px;
+
+    }
+        .wp-class{
+      margin-top: 20px;
+      padding:0;
+    }
+     .wp-class li a{
+      display: block;
+      background: rgb(254,208,53);
+      border-radius: 1px;
+      width: 50px;
+      font-size: 14px;
+      height: 20px;
+      line-height: 20px;
+      position: absolute;
+      right: 0;
+      bottom: 3px;
+      color: white;
+      text-decoration: none;
+    }
+    .work-phase img{
+    transition: transform 2s ease;
+    height: 98px;
+
+    }
+
+    .work-phase:hover img{
+      transform: rotateY(360deg);
+    }
+    .work-phase span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .work-phase em {
+      position: absolute;
+      display: block;
+      font-size: 14px;
+      bottom: 0;
+      left: 0;
+      text-align: left;
+      font-style: normal;
+    }
+
+
+
+    .work-phase h6 {
+      font-size: 16px;
+      line-height: 28px;
+      color: #c0392b;
+      font-weight:100;
+      margin: 0;
+      margin-bottom: 25px;
+    }
+    .work-phase, .work-phase p {
+      font-size: 18px;
+      line-height: 28px;
+      color: #000000;
+      font-weight: 100;
+    }
+
+/*service*/
+
+
+
+.ico-sm{
+  display: block;float: left;margin-left: 20px;
+}
+
+
+
+#fh5co-blog-section{
+  background: url(img/bgcode.png);
+}
+
+
+.fh5co-blog {
+  
+  /*margin-bottom: 60px;*/
+}
+.fh5co-blog a img {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 200px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+
+}
+@media screen and (max-width: 768px) {
+  .fh5co-blog {
+    width: 100%;
+  }
+}
+.fh5co-blog .image-popup {
+  opacity: 1;
+}
+.fh5co-blog .image-popup p{
+  color: #fff;
+
+}
+.fh5co-blog .image-popup span {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.fh5co-blog .image-popup span.posted_by {
+  font-style: italic;
+  color: #f5fbd5;
+  font-size: 18px;
+}
+.fh5co-blog .image-popup span.comment {
+  float: right;
+}
+.fh5co-blog .image-popup span.comment a {
+  color: #fff;
+}
+.fh5co-blog .image-popup span.comment a i {
+  color: #fff;
+  padding-left: 7px;
+}
+.fh5co-blog .image-popup h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+
+}
+.fh5co-blog .image-popup h3 a {
+  color: #dce0e4;
+}
+#fh5co-blog-section {
+  padding: 30px 0;
+}
+#fh5co-blog-section h3{
+  color: white;
+  font-size: 30px;
+  /*font-weight: normal;*/
+}
+.underh3{
+  color: white;
+  margin: 40px 0 20px;
+}
+
+
+
+/*footer*/
+
+
+
+
+/*footer*/
+.footer{background:#f9f9f9; overflow:hidden; clear:both; display:block;width: 100% }
+.footer ul{border-bottom: 1px solid #ccc;padding:20px 0 10px;}
+.footer li{text-align: center;line-height: 40px;border-left: 1px solid #ccc}
+.footer li a{color: #333;}
+.footer li:first-child{border:none;}
+
+
+</style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- <div id="bs-example-navbar-collapse-2"></div> -->
+<!-- <div class="topLogo"><a href=""><img src="img/newlogo.png" alt="" width="80"></a></div> -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" id='navbutton' class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="img/newlogo.png" alt="" width="80"></a>
+    </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">首页</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">课程大纲 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">java学院</a></li>
+            <li><a href="#">前端学院</a></li>
+            <li><a href="#">大数据学院</a></li>
+            <!-- <li class="divider"></li>
+            <li><a href="#">Separated link</a></li> -->
+          </ul>
+        </li>
+        <li><a href="#">师资团队</a></li>
+        <li><a href="#">视频教程</a></li>
+        <li><a href="#">报名流程</a></li>
+        <li><a href="#">交流论坛</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+</nav>
+  
+
+  
+
+
+
+  <div id="carousel-example-generic" class="carousel slide " data-ride="carousel" style="position: relative;">
+  
+  <!-- Indicators -->
+<!--   <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+
+  </ol> -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="img/b-1-1.jpg" alt="..." height="445">
+    <!--   <div class="carousel-caption" >
+        <h3>图1</h3>
+        <p>我是图1</p>
+      </div> -->
+    </div>
+    <div class="item" >
+    <div class="carousel-caption" >
+        <button class="btn btn-primary">立即了解</button>
+      </div>
+      <img src="img/promo-bg.jpg" alt="...">
+      
+    </div>
+    <div class="item">
+      <img src="img/bg-3.jpg" alt="...">
+      <!-- <div class="carousel-caption"> -->
+<!--       <h3>图3</h3>
+        <p>我是图3</p>
+      </div> -->
+    </div>
+
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<div style="background:rgb(237,239,240);height:60px;text-align:center;    line-height: 60px;
+    font-size: 18px;
+    letter-spacing: 8px;">
+  2017最新开班,立即报名即享优惠
+</div>
+<!-- process -->
+<section id="process">
+  <div class="container">
+      <div class="triangle-down"></div>
+        
+        <div class="row row-process">
+        
+          <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="work-phase work-phase1">
+                    <img src="img/java.png" alt="">
+                   <h2>Java</h2>
+                   <!-- <h6>Phase 01</h6> -->
+                   <ul class="wp-class">
+                     <li>
+                       <span>Java免费零基础入门班</span>
+                       <em>开班时间:02-13</em>
+                       <a href="#">抢位中</a>
+                     </li>
+                     <li>
+                       <span>Java免费零基础入门班</span>
+                       <em>开班时间:02-13</em>
+                       <a href="#">抢位中</a>
+                     </li>
+                     <li>
+                       <span>Java免费零基础入门班</span>
+                       <em>开班时间:02-13</em>
+                       <a href="#">抢位中</a>
+                     </li>
+                   </ul>
+                </div>
+            </div><!--phase1-->
+            
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="work-phase work-phase2">
+                    <img src="img/html.png" alt=""  >
+                   <h2>HTML5</h2>
+                   <!-- <h6>Phase 02</h6> -->
+                   <ul class="wp-class">
+                     <li>
+                       <span>HTML5免费前端入门班</span>
+                       <em>开班时间:02-13</em>
+                       <a href="#">抢位中</a>
+                     </li>
+                     <li>
+                       <span>HTML5免费前端入门班</span>
+                       <em>开班时间:02-13</em>
+                       <a href="#">抢位中</a>
+                     </li>
+                     <li>
+                       <span>HTML5免费前端入门班</span>
+                       <em>开班时间:02-13</em>
+                       <a href="#">抢位中</a>
+                     </li>
+                   </ul>
+                </div>
+            </div><!--phase2-->
+            
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="work-phase work-phase3">
+                    <img src="img/cloud.png" alt="">
+                   <h2>大数据</h2>
+                   <!-- <h6>Phase 03</h6> -->
+                   <ul class="wp-class">
+                     <li>
+                       <span>大数据+云计算高手班</span>
+                       <em>开班时间:02-13</em>
+                       <a href="#">抢位中</a>
+                     </li>
+                     <li>
+                       <span>大数据+云计算高手班</span>
+                       <em>开班时间:02-13</em>
+                       <a href="#">抢位中</a>
+                     </li>
+                     <li>
+                       <span>大数据+云计算高手班</span>
+                       <em>开班时间:02-13</em>
+                       <a href="#">抢位中</a>
+                     </li>
+                   </ul>
+                </div>
+            </div><!--phase3-->
+            
+
+
+
+
+
+    </div>
+    
+ </section>
+ <!-- service -->
+
+      
+      <!-- <div class="video-container "> -->
+  <div id="fh5co-blog-section" class="fh5co-section-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+            <h3>课程介绍</h3>
+            <p class='underh3'>尚学堂上门招聘企业累计达到了上千家,直接对接企业，让我们对于企业的需求有更精准的把握。经过十年的打磨，我们于2017推出了”项目实战班”。实战才是最快的学习方法，真实项目案例的接触才能让学生学到更多的技术，因此，我们推出”三大千万级真实商业项目”传授，涵盖最热门的领域：互联网协作平台、教育平台、电商平台。</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="fh5co-blog animate-box">
+              <a href="#" ><img class="img-responsive" src="img/g6.jpg" alt="" id="img1"></a>
+              <div class="image-popup" href="#">
+                <div class="prod-title">
+                  <h3><a href="#">JAVA</a></h3>
+                  <span class="posted_by">尚学堂十年第一学科,就业面最广</span>
+                  
+                  <p class="ppap">HTML5,CSS,Javascript<br>jQuery库,bootstrap/angularjs/vuejs框架<br>微信小程序</p>
+                  <a href="#" class="btn btn-warning">了解更多</a>
+                </div>
+              </div> 
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="fh5co-blog animate-box">
+              <a href="#"><img class="img-responsive" src="img/g5.jpg" alt="" id="img2"></a>
+              <div class="image-popup" href="#">
+                <div class="prod-title">
+                  <h3><a href="#">HTML5</a></h3>
+                  <span class="posted_by">时下最热H5,最具发展前景</span>
+                  
+                  <p class="ppap">HTML5,CSS,Javascript<br>jQuery库,bootstrap/angularjs/vuejs框架<br>ES6、微信小程序开发等最新技术</p>
+                  <a href="#" class="btn btn-warning">了解更多</a>
+                </div>
+              </div> 
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="fh5co-blog animate-box">
+              <a href="#"><img class="img-responsive" src="img/g12.jpg" alt="" id="img3"></a>
+              <div class="image-popup" href="#">
+                <div class="prod-title">
+                  <h3><a href="#">大数据</a></h3>
+                  <span class="posted_by">云数学院经典课程,直击百万年薪</span>
+                  
+                  <p class="ppap">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  <a href="#" class="btn btn-warning">了解更多</a>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fh5co-blog-section -->
+
+      <!-- </div> -->
+
+      <section style="background:white url('img/blue8.jpg') bottom no-repeat;background-position: 100%; width: 100%">
+        <div class="container">
+      <h2 class="text-center slideh2">尚学堂校园实景</h2>
+      
+
+      <div class="wrapper">
+
+        <ul id="sb-slider" class="sb-slider">
+          <li>
+            <a href="#" target="_blank"><img src="img/slide/g5.jpg" alt="image1" class="img4" /></a>
+            <div class="sb-description">
+              <h3>尚学堂上海校区</h3>
+            </div>
+          </li>
+          <li>
+            <a href="#" target="_blank"><img src="img/slide/g6.jpg" alt="image2" class="img4"/></a>
+            <div class="sb-description">
+              <h3>尚学堂上海校区</h3>
+            </div>
+          </li>
+          <li>
+            <a href="#" target="_blank"><img src="img/slide/g11.jpg" alt="image1" class="img4"/></a>
+            <div class="sb-description">
+              <h3>尚学堂上海校区</h3>
+            </div>
+          </li>
+          <li>
+            <a href="#" target="_blank"><img src="img/slide/g12.jpg" alt="image1" class="img4"/></a>
+            <div class="sb-description">
+              <h3>尚学堂上海校区</h3>
+            </div>
+          </li>
+          <li>
+            <a href="#" target="_blank"><img src="img/slide/5.jpg" alt="image1" class="img4"/></a>
+            <div class="sb-description">
+              <h3>尚学堂上海校区</h3>
+            </div>
+          </li>
+          <li>
+            <a href="#" target="_blank"><img src="img/slide/6.jpg" alt="image1" class="img4"/></a>
+            <div class="sb-description">
+              <h3>尚学堂上海校区</h3>
+            </div>
+          </li>
+          <li>
+            <a href="#" target="_blank"><img src="img/slide/7.jpg" alt="image1" class="img4"/></a>
+            <div class="sb-description">
+              <h3>尚学堂上海校区</h3>
+            </div>
+          </li>
+        </ul>
+
+        <div id="shadow" class="shadow"></div>
+
+        <div id="nav-arrows" class="nav-arrows">
+          <a href="#" ></a>
+          <a href="#" ></a>
+        </div>
+
+      </div>
+
+    </div>
+      </section>
+
+
+<!-- footer -->
+<!-- <div class="footer">
+  <div class="foot">
+      <ul class="foot_service main">
+          <li><a href="/download.html" target="_blank"><i class="icon-facetime-video ico_r"></i>免费视频教程</a></li>
+            <li><a href="http://bbs.bjsxt.com/forum-90-1.html" target="_blank"><i class="icon-laptop ico_r"></i>每周8-20家企业上门招聘</a></li>
+            <li><a href="http://bbs.bjsxt.com/thread-20-1-1.html" target="_blank"><i class="icon-table ico_r"></i>就业薪资全部公开</a></li>
+            <li><a href="/kb/" target="_blank"><i class="icon-calendar ico_r"></i>全部开班日期一览表</a></li>
+            <li class="last"><a href="http://dkt.zoosnet.net/LR/Chatpre.aspx?id=DKT79375768&lng=cn&p=&r=" target="_blank"><i class="icon-comment ico_r"></i>7*24小时免费咨询</a></li>
+        </ul>
+        <ul class="foot_nav main">
+          <li>
+              <h4>关于我们</h4>
+                <a href="/html/about/1/" target="_blank">学堂介绍</a>
+                <a href="/html/about/7/" target="_blank">加入学堂</a>
+                <a href="/html/about/2/" target="_blank">公司大事</a>
+                <a href="http://www.bjsxt.com/index.php?m=content&c=index&a=lists&catid=20" target="_blank">学堂优势</a>
+            </li>
+            <li>
+              <h4>旗下品牌</h4>
+                <a href="http://www.yunshuxueyuan.com/" target="_blank">中科云数</a>
+                <a href="http://www.sxt.cn/" target="_blank">速学堂</a>
+            </li>
+            <li>
+              <h4>校区攻略</h4>
+                <a href="/html/help/5/" target="_blank">校园环境</a>
+                <a href="/html/help/3/" target="_blank">住宿攻略</a>
+                <a href="/html/route/" target="_blank">来校路线</a>
+            </li>
+            <li>
+              <h4>学习资源</h4>
+                <a href="/download.html" target="_blank">视频库</a>
+                <a href="/html/network/" target="_blank">公开课</a>
+                <a href="http://bjsxt.ke.qq.com/" target="_blank">腾讯课堂</a>
+                <a href="http://e.youku.com/v/search/searchlist?keyword=%E5%B0%9A%E5%AD%A6%E5%A0%82&qq-pf-to=pcqq.c2c" target="_blank">优酷学堂</a>
+            </li>
+            <li>
+              <h4>学堂故事</h4>
+                <a href="/html/zb/" target="_blank">教师直播间</a>
+                <a href="/employment/" target="_blank">就业喜报</a>
+                <a href="/technology/" target="_blank">学堂文库</a>
+            </li>
+            <li class="wx">
+              <div class="img"><img src="http://www.bjsxt.com/statics/images/bjsxt/images/wb.jpg" /><p>尚学堂微博</p></div>
+                <div class="img"><img src="http://www.bjsxt.com/statics/images/bjsxt/images/wx.jpg" /><p>尚学堂订阅号</p></div>
+                <div class="img"><img src="http://www.bjsxt.com/statics/images/bjsxt/images/wx1.jpg" /><p>尚学堂服务号</p></div>
+                
+            </li>
+        </ul>
+        <div class="blank10"></div><div class="blank10"></div>
+        <div class="foot_link main">
+        <h1>友情链接</h1>
+                        <a href="http://www.zbj.com/rjkf/" target="_blank">软件开发</a>
+                <a href="http://www.i3done.com/" target="_blank">创客教育</a>
+                <a href="http://www.sxt.cn/" target="_blank">在线学习平台</a>
+                <a href="http://www.techxinwen.com/" target="_blank">中国科技资讯</a>
+                <a href="http://www.idcs.cn/" target="_blank">天互数据</a>
+                <a href="http://www.ok165.com" target="_blank">科技新闻资讯</a>
+                <a href="http://www.chnir.com/" target="_blank">中国投资研究网</a>
+                <a href="http://www.fixhdd.cn/" target="_blank">数据恢复</a>
+                <a href="http://www.pc377.com/" target="_blank">南阳电脑网</a>
+                <a href="http://w3cshare.com" target="_blank">W3Cshare</a>
+                <a href="http://edu.szhk.com/" target="_blank">深圳教育</a>
+                <a href="http://www.soft78.com/" target="_blank">软件产品网</a>
+                <a href="http://bbs.hh010.com" target="_blank">CCNA</a>
+                <a href="http://www.szaima.com/" target="_blank">深圳网</a>
+                <a href="http://www.5imb.com/" target="_blank">网站模板</a>
+                <a href="http://www.36dsj.com/" target="_blank">大数据</a>
+                <a href="http://www.ittribalwo.com/" target="_blank">excel教程</a>
+                <a href="http://hn.huatu.com" target="_blank">湖南人事考试网</a>
+                <a href="http://www.icoolxue.com" target="_blank">爱酷学习网</a>
+                <a href="http://nj.houxue.com" target="_blank">南京厚学网</a>
+                <a href="http://www.chuanke.com/" target="_blank">百度传课</a>
+                <a href="http://www.xialingying.cc/" target="_blank">国际夏令营</a>
+                <a href="http://www.3g-edu.org" target="_blank">Android培训</a>
+                <a href="http://www.lanou3g.com/" target="_blank">iOS培训</a>
+                <a href="http://bbs.it-home.org/" target="_blank">程序员之家</a>
+                <a href="http://www.kokojia.com/" target="_blank">培训视频</a>
+                <a href="http://bjsxt.jiaoyu.baidu.com/" target="_blank">百度教育</a>
+                <a href="http://www.bwie.net/" target="_blank">北京八维教育</a>
+                <a href="http://www.cssxt.com/" target="_blank">长沙尚学堂</a>
+                <a href="http://www.21jsj.cc/" target="_blank">金世纪教育</a>
+                <a href="http://www.itpxpj.com/" target="_blank">IT培训评价网</a>
+                <a href="http://bbs.ibeifeng.com/" target="_blank">北风网</a>
+                <a href="http://www.javaxxz.com/" target="_blank">java学习论坛</a>
+                <a href="http://edu.cnzz.cn/" target="_blank">站长学院</a>
+                <a href="http://www.bjsxt.com" target="_blank">java学习网站</a>
+                <a href="http://www.bjsxt.cn" target="_blank">尚学堂论坛</a>
+                <a href="http://www.bjsxt.com" target="_blank">马士兵java</a>
+                <a href="http://www.bjsxt.com" target="_blank">java视频教程</a>
+                <a href="http://www.bjsxt.com" target="_blank">java培训</a>
+                        </div>     
+    </div> -->
+  <section class="footer"> 
+    <div class="container">
+      <ul class="row">
+        <li class="col-md-3 col-sm-6">
+          <a href="#">每周8-20家企业上门招聘</a>
+        </li>
+        <li class="col-md-3 col-sm-6">
+          <a href="#">就业薪资全部公开</a>
+        </li>
+        <li class="col-md-3 col-sm-6">
+          <a href="#">全部开班日期一览表</a>
+        </li>
+        <li class="col-md-3 col-sm-6">
+          <a href="#">7*24小时免费咨询</a>
+        </li>
+      </ul>
+      <ul class="row">
+        
+      </ul>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+    <script type="text/javascript" src="js/jquery.slicebox.js"></script>
+    <script>
+      (function($, window, undefined) {
+    // outside the scope of the jQuery plugin to
+    // keep track of all dropdowns
+    var $allDropdowns = $();
+    // if instantlyCloseOthers is true, then it will instantly
+    // shut other nav items when a new one is hovered over
+    $.fn.dropdownHover = function(options) {
+
+        // the element we really care about
+        // is the dropdown-toggle's parent
+        $allDropdowns = $allDropdowns.add(this.parent());
+
+        return this.each(function() {
+            var $this = $(this).parent(),
+                defaults = {
+                    delay: 100,
+                    instantlyCloseOthers: true
+                },
+                data = {
+                    delay: $(this).data('delay'),
+                    instantlyCloseOthers: $(this).data('close-others')
+                },
+                options = $.extend(true, {}, defaults, options, data),
+                timeout;
+
+            $this.hover(function() {
+                if(options.instantlyCloseOthers === true)
+                    $allDropdowns.removeClass('open');
+
+                window.clearTimeout(timeout);
+                $(this).addClass('open');
+            }, function() {
+                timeout = window.setTimeout(function() {
+                    $this.removeClass('open');
+                }, options.delay);
+            });
+        });
+    };
+
+    $('[data-hover="dropdown"]').dropdownHover();
+})(jQuery, this);
+
+
+    if ($(document).scrollTop() >= 40) {
+                $('.navbar').eq(0).css('background','#172937');
+            }
+            ;
+    if ($(document).scrollTop() >= 400) {
+                $('.dropdown-menu').eq(0).css('background','#172937');
+            }
+            ;
+            $(window).scroll(function() {
+                if ($(document).scrollTop() >= 40) {
+                    $('.navbar').eq(0).css('background','#172937');
+                }
+                ;
+                if ($(document).scrollTop() == 0) {
+                    $('.navbar').eq(0).css('background','transparent');
+                }
+                ;
+                if ($(document).scrollTop() >= 400) {
+                $('.dropdown-menu').eq(0).css('background','#172937');
+                }else{
+                $('.dropdown-menu').eq(0).css('background','transparent');
+
+                }
+            ;
+            if ($(document).scrollTop() >= 650) {
+                $('#img1').css('animation','getUp 2s ease forwards');
+                $('#img2').css('animation','getUp 2s ease 0.3s forwards');
+                $('#img3').css('animation','getUp 2s ease 0.6s forwards');
+            }
+            ;
+            });
+
+            if ($(document).scrollTop() >= 650) {
+                $('#img1').css('animation','getUp 2s ease forwards');
+                $('#img2').css('animation','getUp 2s ease 0.3s forwards');
+                $('#img3').css('animation','getUp 2s ease 0.6s forwards');
+            }
+            ;
+              // console.log($(document).scrollTop())
+
+              // if($(window).width()>1400){
+              //   $('#fh5co-blog-section').css('padding-top','100px');
+              //   $('.underh3').eq(0).css('line-height','30px');
+              //   $('.ppap').css('margin-bottom','30px');
+              // }
+              $("#navbutton").click(function(){
+                $('.navbar').eq(0).css('background','#172937');
+
+              })
+    
+
+              //slide
+    $(function() {
+        
+        var Page = (function() {
+
+          var $navArrows = $( '#nav-arrows' ).hide(),
+            $shadow = $( '#shadow' ).hide(),
+            slicebox = $( '#sb-slider' ).slicebox( {
+              onReady : function() {
+
+                $navArrows.show();
+                $shadow.show();
+
+              },
+              orientation : 'r',
+              cuboidsRandom : true,
+              disperseFactor : 30
+            } ),
+            
+            init = function() {
+
+              initEvents();
+              
+            },
+            initEvents = function() {
+
+              // add navigation events
+              $navArrows.children( ':first' ).on( 'click', function() {
+
+                slicebox.next();
+                return false;
+
+              } );
+
+              $navArrows.children( ':last' ).on( 'click', function() {
+                
+                slicebox.previous();
+                return false;
+
+              } );
+
+            };
+
+            return { init : init };
+
+        })();
+
+        Page.init();
+
+      });
+    </script>
+
+</body>
+</html>

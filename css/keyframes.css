@@ -1,0 +1,124 @@
+@charset "utf-8";
+@keyframes getShow{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes getUp{
+	0%{
+		opacity: 0;
+		transform: translateY(130px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes getLineShow{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 50%;
+	}
+}
+@keyframes getRightShow{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+@keyframes getUpShow{
+	0%{
+		height: 0%;
+	}
+	100%{
+		height: 100%;
+	}
+}
+@keyframes insideLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(-500px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes insideRight{
+	0%{
+		opacity: 0;
+		transform: translateX(500px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes insideUp{
+	0%{
+		opacity: 0;
+		transform: translateY(400px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes getT{
+	0%{
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes getL{
+	0%{
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes getR{
+	0%{
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes getD{
+	0%{
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes rotateY{
+	0%{
+		opacity: 0;
+		transform: rotateY(0deg);
+	}
+	100%{
+		opacity: 1;
+		transform: rotateY(360deg);
+	}
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>上海尚学堂</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      
+
+<style>
+    body {
+      font-family: "Microsoft Yahei";
+      font-size: 14px;
+      position: relative;
+      background: #333;
+      padding-bottom: 50px;
+
+    }
+    li{
+      list-style: none;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      color: #fff;
+      text-decoration: none;
+    }
+    .row {
+    margin-right: 0;
+    margin-left: 0;
+    }
+
+    .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+    color: #fff;
+    background:transparent;
+    }
+    .navbar-inverse .navbar-nav>li>a {
+        border-bottom: 2px solid transparent;
+        color: #fff;
+    }
+    .navbar-inverse .navbar-nav>li>a:hover{
+
+      border-bottom: 2px solid rgb(254,208,53);
+    }
+        .dropdown-menu {background-color: transparent;
+          min-width: 100px;}
+       
+        .dropdown-menu>li>a {
+          padding: 3px 10px;
+          color: #fff;
+
+      }
+        .navbar{
+          margin-bottom: 0;
+          border-radius: 0;
+
+          background: transparent;
+          border:0;
+          transition: all .5s ease;
+
+
+        }
+
+        .navbar-brand{
+          padding:6px 35px;
+
+        }
+    
+</style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" id='navbutton' class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="img/newlogo.png" alt="" width="80"></a>
+    </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="navbar.html">首页</a></li>
+        <li class="dropdown">
+          <a href="information2.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">课程大纲 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">java学院</a></li>
+            <li><a href="#">前端学院</a></li>
+            <li><a href="#">大数据学院</a></li>
+
+          </ul>
+        </li>
+        <li><a href="#">师资团队</a></li>
+        <li><a href="#">视频教程</a></li>
+        <li><a href="#">报名流程</a></li>
+        <li><a href="#">交流论坛</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+</nav>
+
+
+
+
+
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+  (function($, window, undefined) {
+    var $allDropdowns = $();
+
+    $.fn.dropdownHover = function(options) {
+    $allDropdowns = $allDropdowns.add(this.parent());
+
+    return this.each(function() {
+        var $this = $(this).parent(),
+            defaults = {
+                delay: 100,
+                instantlyCloseOthers: true
+            },
+            data = {
+                delay: $(this).data('delay'),
+                instantlyCloseOthers: $(this).data('close-others')
+            },
+            options = $.extend(true, {}, defaults, options, data),
+            timeout;
+
+        $this.hover(function() {
+            if(options.instantlyCloseOthers === true)
+                $allDropdowns.removeClass('open');
+
+            window.clearTimeout(timeout);
+            $(this).addClass('open');
+        }, function() {
+            timeout = window.setTimeout(function() {
+                $this.removeClass('open');
+            }, options.delay);
+        });
+    });
+};
+
+$('[data-hover="dropdown"]').dropdownHover();
+})(jQuery, this);
+
+
+if ($(document).scrollTop() >= 40) {
+  $('.navbar').eq(0).css('background','#172937');
+};
+if ($(document).scrollTop() >= 400) {
+  $('.dropdown-menu').eq(0).css('background','#172937');
+};
+$(window).scroll(function() {
+  if ($(document).scrollTop() >= 40) {
+    $('.navbar').eq(0).css('background','#172937');
+  };
+  if ($(document).scrollTop() == 0) {
+    $('.navbar').eq(0).css('background','transparent');
+  };
+  if ($(document).scrollTop() >= 400) {
+    $('.dropdown-menu').eq(0).css('background','#172937');
+  }else{
+    $('.dropdown-menu').eq(0).css('background','transparent');
+  };
+})
+          
+  $("#navbutton").click(function(){
+    $('.navbar').eq(0).css('background','#172937');
+  })
+
+          
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+.bg{height:400px;background: url(../../img/zl/courseBg.jpg) no-repeat center center;}
+.mainContent{width:1140px;height:46px;margin: 0 auto;text-align: center;font-size:3em;color:#fff;position:relative;margin-top:130px;}
+.btn-z{width:900px;margin:40px 0 0 120px;height:60px;line-height:50px;background:#303030;border-radius:10px;}
+.btn-doc{font-size:18px;}
+.active1{color:#303030;bacground:#fff;}
+
+.title{height:45px;line-height: 45px;font-size:20px;}
+.title .f{width:61px;height:30px;line-height: 30px;text-indent:7px;color:white;background: url(../../img/zl/f_bg.png) no-repeat;float:left;margin-top:7px;}
+.title a{color:black;margin-left:5px;}
+.javaLeftIma{height:375px;background: #5b72fe;}
+.javaLeftIma img{margin-top:29px;}
+.javaLeftIma figcaption{width:210px;height:113px;margin:50px 0 0 30px;background:rgba(255,255,255,.2);color:#0637a5;}
+.javaLeftIma figcaption h3{padding-top:20px;font-weight:normal; }
+.javaLeftIma figcaption span{display:block;width:160px;margin:10px 0 0 20px;font-size:15px;border-top:1px solid #0637a5;}
+.box{width:250px;height:186px;border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;position:relative;}
+.box1{border-top:1px solid #ccc;}
+.box:hover .p1{color:#f52f3e;}
+.box:hover img{transform:translateX(-20px);}
+.box p.p1{padding-top:20px;margin-left:10px;}
+
+.box p.p2{margin-left:10px;color:#f52f3e;}
+.box img{position:absolute;bottom:10px;right:20px;transition:1s;}
+.teacher{width:270px;height:374px;border:1px solid #ccc;}
+.teacher p.p1{margin:20px 0 0 20px;font-size:24px;}
+.teacher:hover p.p1{color:#f52f3e;}
+.teacher p.p2{color:#f52f3e;margin:10px 0 0 20px;}
+.teacher:hover img{transform:translateX(-20px);}
+.teacher img{display:block;margin:70px 0px 0 140px;transition:1s;}
+
+.money{width:230px;height:374px;margin-left:20px;border:1px solid #ccc;border-bottom:1px solid transparent;}
+.money .box2{width:230px;height:124px;font-size:16px;border-bottom:1px solid #ccc;}
+.money .box2 p.p1{margin-left:20px;}
+.money .box2 p.p2{margin:10px 0 0 20px;color:#f52f3e;}
+.money .box2:hover img{transform:translateX(-15px);}
+.money .box2:hover .p1{color:#f52f3e;}
+.money .box2 img{display:block;width:55px;height:55px;margin-left:160px;transition:1s;}
+ 
+/*返回顶部*/
+.backTop{display:none;cursor:pointer;float:right;color:#fff;border-radius: 2px;font-size:12px;padding:7px 9px;position:fixed;right:30px;bottom:10px;background: rgba(244, 100, 95, 0.6); }
